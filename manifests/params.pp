@@ -17,11 +17,12 @@ class grafana1::params {
     },
   }
 
-  $default_route  = '/dashboard/file/default.json'
-  $grafana_group  = 'root'
-  $grafana_user   = 'root'
-  $install_dir    = '/opt'
-  $install_method = 'archive'
-  $symlink        = true
-  $version        = '1.8.1'
+  $default_route      = '/dashboard/file/default.json'
+  $grafana_group      = 'root'
+  $grafana_user       = 'root'
+  $install_dir        = '/opt'
+  $install_method     = 'archive'
+  $max_search_results = 20
+  $symlink            = true
+  $version            = '1.8.1'
 }
