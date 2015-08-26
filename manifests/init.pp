@@ -124,7 +124,7 @@ class grafana1 (
 
   file { $config_js:
     ensure  => present,
-    content => template('grafana/config.js.erb'),
+    content => template('grafana1/config.js.erb'),
     group   => $grafana_group,
     owner   => $grafana_user,
     require => $require_target,
