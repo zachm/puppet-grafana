@@ -1,6 +1,7 @@
-# == Class: grafana
+# == Class: grafana1
 #
 # Installs and configures Grafana.
+# This is a weirdly namespaced version of an old 1.x fork. Just so you know.
 #
 # === Parameters
 # [*version*]
@@ -50,7 +51,7 @@
 #
 # === Examples
 #
-#  class { '::grafana':
+#  class { '::grafana1':
 #    version         => '1.7.0',
 #    install_method  => 'package',
 #    datasources     => {
@@ -68,18 +69,18 @@
 #    }
 #  }
 #
-class grafana (
-  $datasources    = $grafana::params::datasources,
-  $default_route  = $grafana::params::default_route,
+class grafana1 (
+  $datasources    = $grafana1::params::datasources,
+  $default_route  = $grafana1::params::default_route,
   $download_url   = "http://grafanarel.s3.amazonaws.com/grafana-${version}.tar.gz",
-  $grafana_group  = $grafana::params::grafana_group,
-  $grafana_user   = $grafana::params::grafana_user,
-  $install_dir    = $grafana::params::install_dir,
-  $install_method = $grafana::params::install_method,
-  $symlink        = $grafana::params::symlink,
+  $grafana_group  = $grafana1::params::grafana_group,
+  $grafana_user   = $grafana1::params::grafana_user,
+  $install_dir    = $grafana1::params::install_dir,
+  $install_method = $grafana1::params::install_method,
+  $symlink        = $grafana1::params::symlink,
   $symlink_name   = "${install_dir}/grafana",
-  $version        = $grafana::params::version,
-) inherits grafana::params {
+  $version        = $grafana1::params::version,
+) inherits grafana1::params {
   # TODO: make sure at least one is 'default = true' - probably requires use of lambdas
   # TODO: make sure at least one is 'grafanaDB = true' - probably requires use of lambdas
 

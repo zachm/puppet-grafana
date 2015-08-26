@@ -3,7 +3,7 @@ require 'spec_helper'
 #Puppet::Util::Log.level = :debug
 #Puppet::Util::Log.newdestination(:console)
 
-describe 'grafana', :type => 'class' do
+describe 'grafana1', :type => 'class' do
 
   context 'valid datasources' do
 

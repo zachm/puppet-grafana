@@ -1,8 +1,8 @@
-# == Class: grafana
+# == Class: grafana1
 #
 # Default parameters
 #
-class grafana::params {
+class grafana1::params {
   $datasources    = {
     'elasticsearch' => {
       'grafanaDB' => 'true', # lint:ignore:quoted_booleans
